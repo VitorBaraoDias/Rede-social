@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_chat">
+
+    <TextView
+        android:id="@+id/txtCriarConta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Create"
+        android:textColor="#3C2C45"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="680dp" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="83dp"
+        android:layout_height="72dp"
+        android:background="@drawable/nav_custom"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <EditText
+        android:id="@+id/txtEmail2"
+        android:layout_width="327dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/design_button"
+        android:backgroundTint="#D0C4F4"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+
+        android:paddingStart="15dp"
+        android:paddingEnd="60dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/txtPass2"
+        android:layout_width="327dp"
+        android:layout_height="62dp"
+        android:background="@drawable/design_button"
+        android:backgroundTint="#D0C4F4"
+
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="60dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:layout_editor_absoluteY="496dp" />
+
+    <ImageView
+        android:id="@+id/imgVisibilityPass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:rotationY="180"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPass2"
+        app:layout_constraintEnd_toEndOf="@+id/txtPass2"
+        app:layout_constraintTop_toTopOf="@+id/txtPass2"
+        app:srcCompat="@drawable/ic_pass_visibility" />
+
+    <TextView
+        android:id="@+id/txtOpcaoConta3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Don't have a account?"
+        android:textColor="#717070"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="653dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Skygram"
+        android:textColor="#424141"
+        android:textSize="60sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="423dp"
+        android:layout_height="331dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_login"
+        tools:layout_editor_absoluteY="-17dp" />
+
+    <ImageView
+        android:id="@+id/btnLogar2"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:background="?attr/actionModeCloseDrawable"
+        android:backgroundTint="#FFFFFF"
+        android:rotationY="180"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="Sign Up"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="590dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

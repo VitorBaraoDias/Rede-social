@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_login.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/custom_inputname.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/design_button.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/fundo_profile.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/ic_pass_visibility.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/nav_custom.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/sombra.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/toast_border.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/txt_custom.xml" value="0.164" />
+        <entry key="app/src/main/res/font/.xml" value="0.39114583333333336" />
+        <entry key="app/src/main/res/font/custom_inputname.xml" value="0.3037037037037037" />
+        <entry key="app/src/main/res/font/lato.xml" value="0.39114583333333336" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.4082858413745353" />
+        <entry key="app/src/main/res/layout/activity_insert_name.xml" value="0.38558654785156254" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/estrutura_recycler_mensagens.xml" value="0.5849646432059152" />
+        <entry key="app/src/main/res/layout/estrutura_recycler_mensagens_dm.xml" value="0.7353505452473958" />
+        <entry key="app/src/main/res/layout/fragment_frag_dms.xml" value="0.4210885620117188" />
+        <entry key="app/src/main/res/layout/fragment_frag_inicial.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_frag_perfil.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/fragment_frag_profile.xml" value="0.859381103515625" />
+        <entry key="app/src/main/res/layout/fragment_frag_search.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/layout_recycler.xml" value="0.4948453608247423" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.4547744750976563" />
+        <entry key="app/src/main/res/layout/teste.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/toast_layout.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/menu/navbar_item.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.164" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.164" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5849646432059152" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
