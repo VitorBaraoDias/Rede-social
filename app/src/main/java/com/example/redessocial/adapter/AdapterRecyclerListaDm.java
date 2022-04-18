@@ -2,6 +2,8 @@ package com.example.redessocial.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,13 +37,14 @@ public class AdapterRecyclerListaDm extends RecyclerView.Adapter<AdapterRecycler
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtNome,txtLastMsgConversa;
-        ImageView imgDm;
+        ImageView imgDm,imgPessoaListaDm;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtNome = (TextView) itemView.findViewById(R.id.txtNomePersonDm);
             txtLastMsgConversa= (TextView) itemView.findViewById(R.id.txtLastMsgConversa);
             imgDm= (ImageView)  itemView.findViewById(R.id.imgEnviarDmLista);
+            imgPessoaListaDm = (ImageView)  itemView.findViewById(R.id.imgProfileDm);
         }
     }
     @NonNull
@@ -53,10 +56,21 @@ public class AdapterRecyclerListaDm extends RecyclerView.Adapter<AdapterRecycler
 
     @Override
     public void onBindViewHolder(@NonNull AdapterRecyclerListaDm.ViewHolder holder, int position) {
+
+
         final DmLista dmLista = dmListaList.get(position);
         holder.txtNome.setText(dmLista.getNomeConversando());
         holder.txtLastMsgConversa.setText(dmLista.getMensagem());
 
+        if(dmLista.getImagem() == null){
+            holder.imgPessoaListaDm.setImageResource(R.drawable.ic_baseline_account_circle_24);
+        }
+        else{
+            holder.imgPessoaListaDm.setImageBitmap(
+                    Bitmap.createScaledBitmap(
+                            BitmapFactory.decodeByteArray(dmLista.getImagem(), 0, dmLista.getImagem().length),200, 200, false));
+
+        }
         PerfilClass perfilClass = new PerfilClass(dmLista.getNomeConversando(),dmLista.getIdUser());
         holder.imgDm.setOnClickListener(new View.OnClickListener() {
             @Override

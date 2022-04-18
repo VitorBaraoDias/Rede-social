@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.redessocial.MainActivity;
 import com.example.redessocial.bd.DbHelper;
 import com.example.redessocial.objetos.Encrypt;
 import com.example.redessocial.objetos.PerfilClass;
@@ -120,7 +121,14 @@ public class UserDao {
             do {
                 String name = c.getString(c.getColumnIndex("name"));
                 int id = c.getInt(c.getColumnIndex("id_user"));
-                PerfilClass perfilClass = new PerfilClass(name,id);
+                byte[] imagem = null;
+
+                String strSql = "select * from imgPerfil where id_user = ?";
+                Cursor c2 = db.rawQuery(strSql, new String[]{String.valueOf(id)});
+                if (c2.moveToFirst()) {
+                    imagem = c2.getBlob(c2.getColumnIndex("imagem"));
+                }
+                PerfilClass perfilClass = new PerfilClass(name,id,imagem);
                 perfilList.add(perfilClass);
             } while (c.moveToNext());
         }

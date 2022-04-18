@@ -5,7 +5,12 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,11 +19,13 @@ import android.widget.Toast;
 
 import com.example.redessocial.R;
 import com.example.redessocial.adapter.AdapterRecyclerMensagens;
+import com.example.redessocial.bd.dao.ImgPerfilDao;
 import com.example.redessocial.bd.dao.MensagemDao;
 import com.example.redessocial.objetos.DataMensagem;
 import com.example.redessocial.objetos.PerfilClass;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -30,7 +37,7 @@ public class ActivityChat extends AppCompatActivity {
     private TextView txtPessoaConversando;
     //
     //imageview
-    private ImageView imgClose,imgSendMensagem;
+    private ImageView imgClose,imgSendMensagem,imgPessoaConversando;
     //
     //EditText
     private EditText txtEscreverMensagem;
@@ -49,8 +56,9 @@ public class ActivityChat extends AppCompatActivity {
         perfilClass = (PerfilClass) extras.getSerializable("dataUser");
         int id = extras.getInt("meuId");
 
+
         setObj();
-        txtPessoaConversando.setText(perfilClass.getUser_name());
+        setPessoaConversando();
         setMensagens(id,perfilClass.getId_profile());
         setAdapter(dataMensagemList,id);
         imgClose.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +77,19 @@ public class ActivityChat extends AppCompatActivity {
                 }
             }
         });
+        txtEscreverMensagem.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+                recyclerView.smoothScrollToPosition(dataMensagemList.size());
+                Toast.makeText(ActivityChat.this, "oi", Toast.LENGTH_SHORT).show();
+// Aqui você coloca o evento
+
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        });
         Toast.makeText(this, String.valueOf("ID USER Pessoa conversando"+perfilClass.getId_profile()), Toast.LENGTH_SHORT).show();
         Toast.makeText(this, String.valueOf("Meu id"+id), Toast.LENGTH_SHORT).show();
     }
@@ -76,8 +97,10 @@ public class ActivityChat extends AppCompatActivity {
           txtPessoaConversando = findViewById(R.id.txtPessoaConversa);
           imgClose = findViewById(R.id.imgCloseConversa);
           imgSendMensagem = findViewById(R.id.imgSendMensagem);
+          imgPessoaConversando = findViewById(R.id.imgPessoaConversando);
           txtEscreverMensagem = findViewById(R.id.txtEscreverMensagem);
           recyclerView = findViewById(R.id.recyclerMensagens);
+
     }
     private boolean testTxt(){
         if(txtEscreverMensagem.getText().equals("")){
@@ -110,5 +133,19 @@ public class ActivityChat extends AppCompatActivity {
         recyclerView.smoothScrollToPosition(dataMensagemList.size());
         //VAI FAZER COM QUE APAREÇA OS DADOS DA LISTA
         recyclerView.setAdapter(adapterRecyclerConversa);
+    }
+    private void setPessoaConversando(){
+        ImgPerfilDao imgPerfilDao = new ImgPerfilDao(this);
+        if(imgPerfilDao.verificarExistencia(perfilClass.getId_profile())){
+            imgPessoaConversando.setImageBitmap(
+                    Bitmap.createScaledBitmap(
+                            BitmapFactory.decodeByteArray(imgPerfilDao.getImagem(perfilClass.getId_profile()), 0, imgPerfilDao.getImagem(perfilClass.getId_profile()).length),200, 200, false));
+        }
+        else{
+            imgPessoaConversando.setImageResource(R.drawable.ic_baseline_account_circle_24);
+        }
+        txtPessoaConversando.setText(perfilClass.getUser_name());
+
+
     }
 }

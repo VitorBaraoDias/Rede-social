@@ -5,11 +5,21 @@ public class DmLista {
     String nomeConversando = "";
     String mensagem = "";
     int idUser = 0;
+    byte[] imagem = null;
 
-    public DmLista(String nomeConversando, String mensagem,int idUser) {
+    public DmLista(String nomeConversando, String mensagem,int idUser, byte[] imagem) {
         this.nomeConversando = nomeConversando;
         this.mensagem = mensagem;
         this.idUser = idUser;
+        this.imagem = imagem;
+    }
+
+    public byte[] getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(byte[] imagem) {
+        this.imagem = imagem;
     }
 
     public String getNomeConversando() {

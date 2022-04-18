@@ -1,6 +1,7 @@
 package com.example.redessocial.bd.dao;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +10,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.redessocial.MainActivity;
 import com.example.redessocial.bd.DbHelper;
 import com.example.redessocial.objetos.DataMensagem;
 import com.example.redessocial.objetos.DmLista;
@@ -92,9 +94,18 @@ public class MensagemDao {
 
                 Cursor cursorName = db.rawQuery("select name,id_user from user where id_user = ?", new String[]{String.valueOf(listaOrdenada.get(i))});
                 if(cursorName.moveToFirst()){
+
                     String name = cursorName.getString(cursorName.getColumnIndex("name"));
                     int id = cursorName.getInt(cursorName.getColumnIndex("id_user"));
-                    DmLista dmLista = new DmLista(name,mensagem,id);
+                    byte[] imagem = null;
+
+                    String strSql2 = "select * from imgPerfil where id_user = ?";
+                    Cursor c2 = db.rawQuery(strSql2, new String[]{String.valueOf(id)});
+                    if (c2.moveToFirst()) {
+                        imagem = c2.getBlob(c2.getColumnIndex("imagem"));
+                    }
+
+                    DmLista dmLista = new DmLista(name,mensagem,id,imagem);
                     dmListaList.add(dmLista);
                 }
             }

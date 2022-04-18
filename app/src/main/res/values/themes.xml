@@ -21,4 +21,10 @@
     <style name="Theme.RedesSocial.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.RedesSocial.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="border_image" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="color">@color/white</item>
+    </style>
 </resources>

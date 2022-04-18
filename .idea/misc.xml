@@ -26,13 +26,13 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/estrutura_recycler_mensagens.xml" value="0.5849646432059152" />
-        <entry key="app/src/main/res/layout/estrutura_recycler_mensagens_dm.xml" value="0.7353505452473958" />
+        <entry key="app/src/main/res/layout/estrutura_recycler_mensagens_dm.xml" value="0.35813366960907944" />
         <entry key="app/src/main/res/layout/fragment_frag_dms.xml" value="0.4210885620117188" />
         <entry key="app/src/main/res/layout/fragment_frag_inicial.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_frag_perfil.xml" value="0.37552083333333336" />
-        <entry key="app/src/main/res/layout/fragment_frag_profile.xml" value="0.859381103515625" />
+        <entry key="app/src/main/res/layout/fragment_frag_profile.xml" value="0.5413153456998314" />
         <entry key="app/src/main/res/layout/fragment_frag_search.xml" value="0.37552083333333336" />
-        <entry key="app/src/main/res/layout/layout_recycler.xml" value="0.4948453608247423" />
+        <entry key="app/src/main/res/layout/layout_recycler.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login.xml" value="0.4547744750976563" />
         <entry key="app/src/main/res/layout/teste.xml" value="0.37552083333333336" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.37552083333333336" />

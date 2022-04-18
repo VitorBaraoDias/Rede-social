@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardMensagemDm"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardMensagemDm"
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:paddingStart="10dp"
-    >
+    app:cardBackgroundColor="#F9FAFC">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgProfileDm"
-            android:layout_width="94dp"
-            android:layout_height="58dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/profilemen" />
+            app:shapeAppearanceOverlay="@style/border_image"
+            app:srcCompat="@drawable/profilemen">
+
+        </com.google.android.material.imageview.ShapeableImageView>
 
         <TextView
             android:id="@+id/txtNomePersonDm"

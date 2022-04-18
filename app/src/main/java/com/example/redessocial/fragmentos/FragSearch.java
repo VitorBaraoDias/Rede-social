@@ -93,6 +93,5 @@ public class FragSearch extends Fragment {
         recyclerSearch.setItemAnimator(new DefaultItemAnimator());
         //VAI FAZER COM QUE APAREÇA OS DADOS DA LISTA
         recyclerSearch.setAdapter(adapterRecyclerPerfil);
-        Toast.makeText(getContext(), String.valueOf(perfilClassList.size()), Toast.LENGTH_SHORT).show();
     }
 }

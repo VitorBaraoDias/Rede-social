@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8BD1CFD8"
-    tools:context=".chats.ActivityChat">
+    android:background="#F9FAFC"
+    tools:context=".chat.ActivityChat">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,40 +29,58 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="144dp"
-        android:background="@drawable/imgazul_degrade"
-        android:backgroundTint="#BC000000"
-        android:scaleType="matrix"
+        android:layout_width="411dp"
+        android:layout_height="74dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgPessoa"
-        android:layout_width="62dp"
-        android:layout_height="59dp"
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPessoaConversando"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_baseline_account_circle_24"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profilemen" />
+        app:shapeAppearanceOverlay="@style/border_image"></com.google.android.material.imageview.ShapeableImageView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgOnline"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="#3CCBBC"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPessoaConversa"
+        app:layout_constraintEnd_toStartOf="@+id/txtPessoaConversa"
+        app:layout_constraintTop_toTopOf="@+id/txtPessoaConversa"
+        app:shapeAppearanceOverlay="@style/border_image">
+
+    </com.google.android.material.imageview.ShapeableImageView>
 
     <TextView
         android:id="@+id/txtPessoaConversa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:elevation="10dp"
         android:fontFamily="@font/comfortaa"
         android:text="Leonardo Costa"
-        android:textColor="#FFFFFF"
+        android:textColor="#252424"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/imgPessoa"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imgPessoaConversando"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toEndOf="@+id/imgCloseConversa"
-        app:layout_constraintTop_toTopOf="@+id/imgCloseConversa" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
 
     <EditText
         android:id="@+id/txtEscreverMensagem"
@@ -71,8 +89,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/design_button"
-        android:backgroundTint="#FDFDFD"
+        android:background="@drawable/custom_inputname"
         android:ems="10"
         android:fontFamily="@font/comfortaa"
         android:hint="Type someting to send..."
@@ -92,26 +109,16 @@
 
     <ImageView
         android:id="@+id/imgCloseConversa"
-        android:layout_width="37dp"
-        android:layout_height="46dp"
+        android:layout_width="29dp"
+        android:layout_height="44dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/ic_baseline_arrow_back_ios_24"
-        android:backgroundTint="#F6F6F6"
+        android:backgroundTint="#404142"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa"
-        android:text="Online Now"
-        android:textColor="#E3DFDF"
-        app:layout_constraintEnd_toEndOf="@+id/txtPessoaConversa"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@+id/txtPessoaConversa"
-        app:layout_constraintTop_toBottomOf="@+id/txtPessoaConversa" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <ImageView
         android:id="@+id/imgSendMensagem"

@@ -66,7 +66,7 @@ public class AdapterRecyclerMensagens extends RecyclerView.Adapter<AdapterRecycl
         if(dataMensagem.getIdMandou()==idPessoaAtual){
 
 
-            holder.txtMensagem.setTextColor(Color.parseColor("#6C6B6B"));
+            holder.txtMensagem.setTextColor(Color.parseColor("#292828"));
             holder.txtHora.setTextColor(Color.parseColor("#292828"));
             holder.cardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
             //layout
@@ -84,7 +84,7 @@ public class AdapterRecyclerMensagens extends RecyclerView.Adapter<AdapterRecycl
 
             holder.txtMensagem.setTextColor(Color.parseColor("#FFFFFF"));
             holder.txtHora.setTextColor(Color.parseColor("#DDDDDD"));
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#31354C"));
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#3B414A"));
         }
     }
 
