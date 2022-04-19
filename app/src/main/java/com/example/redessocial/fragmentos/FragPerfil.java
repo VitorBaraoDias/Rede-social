@@ -87,6 +87,10 @@ public class FragPerfil extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+
+        try {
+            //  Block of code to try
+
             if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK && null != data) {
                 Uri selectedImage = data.getData();
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
@@ -110,6 +114,10 @@ public class FragPerfil extends Fragment {
             } else {
                 Toast.makeText(getContext(), "You haven't picked Image",Toast.LENGTH_LONG).show();
             }
+        }
+        catch(Exception e) {
+            Toast.makeText(getContext(), "Error",Toast.LENGTH_LONG).show();
+        }
     }
     private void verificarImagem(){
         ImgPerfilDao imgPerfilDao = new ImgPerfilDao(getContext());
